@@ -1,0 +1,35 @@
+<!--
+  Règles locales Wazuh
+  Projet : Incident Response Lab DVWA + BeEF
+  Auteur : [abdelhamid]
+  Date : 2026-10-08
+
+  Ces règles détectent les attaques XSS et l'injection de hook BeEF
+  dans les logs Apache de DVWA.
+-->
+
+<group name="web,appsec,xss,beef,">
+
+  <!-- Détection du hook BeEF injecté via XSS -->
+  <rule id="100100" level="12">
+    <if_sid>31100</if_sid>
+    <url>hook.js</url>
+    <description>Possible BeEF hook injection detected - Browser Session Hijacking</description>
+    <mitre>
+      <id>T1185</id>
+    </mitre>
+    <group>beef_hook,</group>
+  </rule>
+
+  <!-- Détection des tentatives XSS génériques -->
+  <rule id="100101" level="10">
+    <if_sid>31100</if_sid>
+    <match>&lt;script&gt;</match>
+    <description>XSS attempt detected in URL</description>
+    <mitre>
+      <id>T1059.007</id>
+    </mitre>
+    <group>xss_attempt,</group>
+  </rule>
+
+</group>

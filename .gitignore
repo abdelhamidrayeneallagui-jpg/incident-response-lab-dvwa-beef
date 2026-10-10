@@ -1,0 +1,24 @@
+# Secrets
+*.key
+*.pem
+.env
+*.pass
+
+# Fichiers temporaires
+*.tmp
+*.log
+*.bak
+
+# Images de VM (trop lourdes)
+*.vmdk
+*.iso
+*.ova
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
