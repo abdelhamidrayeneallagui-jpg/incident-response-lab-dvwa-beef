@@ -100,5 +100,26 @@ Ce projet démontre la chaîne complète :
 
 \## 📁 Structure du Projet
 
+incident-response-lab/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── docs/
+│ ├── 01-architecture.md
+│ ├── 02-setup.md
+│ ├── 03-attack-scenario.md
+│ ├── 04-detection.md
+│ └── 05-incident-report.md
+├── detection-rules/
+│ └── local_rules.xml
+├── scripts/
+└── screenshots/
+├── 01-infrastructure/
+├── 02-config-reseau/
+├── 03-dvwa/
+├── 04-beef/
+├── 05-wazuh/
+├── 06-attaque-xss/
+└── 07-incident-response/
 
 
