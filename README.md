@@ -98,28 +98,13 @@ Ce projet démontre la chaîne complète :
 
 
 
-\## 📁 Structure du Projet
+## 📁 Structure du Projet
 
-incident-response-lab/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── docs/
-│ ├── 01-architecture.md
-│ ├── 02-setup.md
-│ ├── 03-attack-scenario.md
-│ ├── 04-detection.md
-│ └── 05-incident-report.md
-├── detection-rules/
-│ └── local_rules.xml
-├── scripts/
-└── screenshots/
-├── 01-infrastructure/
-├── 02-config-reseau/
-├── 03-dvwa/
-├── 04-beef/
-├── 05-wazuh/
-├── 06-attaque-xss/
-└── 07-incident-response/
-
-
+- [`docs/`](docs/) — Documentation technique
+  - [Architecture](docs/01-architecture.md)
+  - [Setup](docs/02-setup.md)
+  - [Scénario d'attaque](docs/03-attack-scenario.md)
+  - [Détection](docs/04-detection.md)
+  - [Rapport d'incident (NIST)](docs/05-incident-report.md)
+- [`detection-rules/`](detection-rules/) — Règles Wazuh personnalisées
+- [`screenshots/`](screenshots/) — Captures d'écran par phase
